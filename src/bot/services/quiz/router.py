@@ -220,7 +220,7 @@ async def finish_quiz(message: Message, state: FSMContext):
     result_text = return_description(profile=profile)
     await message.answer(result_text)
 
-    # 7. Сбрасываем FSM и показываем меню
+
     await state.clear()
     await message.answer("Вы в меню:", reply_markup=menu_markup)
     await state.clear()
